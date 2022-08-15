@@ -16,5 +16,13 @@ namespace EntityProjeUygulama
         {
             InitializeComponent();
         }
+
+        DbEntityUrunEntities db = new DbEntityUrunEntities();
+
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+            var komut = db.TBLKATEGORI.ToList();
+            dataGridView1.DataSource = komut;
+        }
     }
 }
