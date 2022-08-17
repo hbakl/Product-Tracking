@@ -21,7 +21,6 @@ namespace EntityProjeUygulama
         {
             Form1 fr = new Form1();
             fr.Show();
-            this.Hide();
 
         }
 
@@ -29,13 +28,17 @@ namespace EntityProjeUygulama
         {
             FrmUrun fru = new FrmUrun();
             fru.Show();
-            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             FrmIstatistik fri = new FrmIstatistik();
             fri.Show();
+        }
+
+        private void FrmAnaForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
